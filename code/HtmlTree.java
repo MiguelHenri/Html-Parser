@@ -4,21 +4,28 @@ import java.io.StringReader;
 import java.util.Scanner;
 import java.util.Stack;
 
-/*
- * This class represents the HTML tree itself.
+/**
+ * Represents the HTML Tree itself.
+ * With methods to access the Three nodes.
  */
 public class HtmlTree {
-    // Attributes
+    
     private String htmlString;
     private HtmlNode rootNode;
     
-    // Constructor
+    /**
+     * Creates a new HtmlTree
+     * 
+     * @param HtmlString URL to get HTML 
+     */
     public HtmlTree(String HtmlString) {
         this.htmlString = HtmlString;
         this.rootNode = null;
     }
 
-    // This function builds the HTML tree from the HTML string
+    /**
+     * Builds the HtmlTree
+     */
     public void buildHtmlTree() {
 
         // Variables used to iterate HTML line by line
@@ -82,7 +89,11 @@ public class HtmlTree {
         stringReader.close();
     }
 
-    // This function uses BFS to get the text at the deepest HTML tree level
+    /**
+     * Gets deepest text in a HtmlTree using BFS
+     * 
+     * @return the deepest text in a HtmlTree
+     */
     public String getDeepestText() {
 
         String deepestText = "";

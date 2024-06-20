@@ -5,10 +5,14 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+/**
+ * A simple HtmlParser. It's used to get the text at the deepest level of the HTML structure from a URL.
+ */
 public class HtmlParser {
-    /*
-     * The main function receives an URL as an argument and gets its HTML.
+    /**
+     * The main function receives an URL and gets its HTML.
      * Then, it gets and prints the text at the deepest level of the HTML structure.
+     * @param args the URL
      */
     public static void main(String[] args) {
 
